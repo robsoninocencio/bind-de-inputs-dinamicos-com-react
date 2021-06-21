@@ -1,3 +1,15 @@
+# Projeto -> Bind de inputs dinâmicos com React
+
+Nesse direto ao ponto, ensinaremos como trabalhar com o bind de inputs dinâmicos. Utilizaremos o React e suas variações, evitando assim poluir o o código com funções que fazem a mesma coisa em todos os componentes.
+
+Esse código foi utilizado para a criação do curso [Bind de inputs dinâmicos com React](https://www.schoolofnet.com/canal-direto-ao-ponto/bind-de-inputs-dinamicos-com-react/) da School of Net.
+
+A School of Net é uma escola online que ensina as mais diversas tecnologias no mundo da programação, desenvolvimento web, games, design e infraestrutura.
+
+School of Net - [https://www.schoolofnet.com](https://www.schoolofnet.com)
+
+# Instrutor: Leonan Luppi
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +80,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Comandos:
+
+```
+npx create-react-app bind-de-inputs-dinamicos-com-react
+cd bind-de-inputs-dinamicos-com-react
+npm start
+
+```
