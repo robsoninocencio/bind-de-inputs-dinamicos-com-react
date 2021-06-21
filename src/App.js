@@ -1,44 +1,51 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       name: '',
-      desc: '',
       age: '',
-      ativo: ''
-    }
-    this.handleInput = this.handleInput.bind(this)
+      sexoMasculino: false,
+      sexoFeminino: false
+    };
+
+    // Se a função handleInput não for uma arrow function precisará deste bind.
+    // this.handleInput = this.handleInput.bind(this);
+
   }
 
-  handleInput(event) {
-    const { target } = event
-    const { name } = target
+  handleInput = (event) => {
+    // return this.setState({ name: event.target.value });
+    const { target } = event;
+    const { name } = target;
     const value = target.type === 'checkbox' ? target.checked : target.value
-    return this.setState({
-      [name]: value
-    });
+    return this.setState({ [name]: value });
+
   }
 
   render() {
-    console.log(this.state)
+    console.log(this.state);
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <div>
-            <input type="text" name="name" onChange={this.handleInput} />
-            <input type="text" name="desc" onChange={this.handleInput} />
-            <input type="number" name="age" onChange={this.handleInput} />
-            <input type="checkbox" name="ativo" onChange={this.handleInput} />
-          </div>
-        </header>
+        <p>
+          Bind de inputs dinamicos com React JS !!!
+        </p>
+        <div>
+          <label htmlFor="name">Nome: </label>
+          <input type="text" name="name" id="idname" onChange={this.handleInput} />
+          <br />
+          <label htmlFor="age">Idade: </label>
+          <input type="number" name="age" id="idage" onChange={this.handleInput} />
+          <br />
+          Sexo: <br />
+          <input type="checkbox" name="sexoMasculino" id="idsexoMasculino" onChange={this.handleInput} />Maculino <br />
+          <input type="checkbox" name="sexoFeminino" id="idsexoFeminino" onChange={this.handleInput} />Feminino
+        </div>
       </div>
     );
+
   }
 }
 
